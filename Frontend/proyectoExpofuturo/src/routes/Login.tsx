@@ -43,7 +43,7 @@ export default function Login() {
                     </div>
                     <div className="botones">
                         <button className="button" type="submit">Ingresar</button>
-                        <a className="button" href="#">Registrarse</a>
+                        <button className="button" type="submit">Registrarse</button>
                     </div>
                 </form>
             </div>
