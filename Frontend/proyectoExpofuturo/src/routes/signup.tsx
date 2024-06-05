@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import DefaultLayout from "../layout/DefaultLayout";
+import { Link } from 'react-router-dom';
 
 export default function Signup() {
     const [name, setName] = useState('');
@@ -31,7 +32,7 @@ export default function Signup() {
                         />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="email">E-mail:</label>
+                        <label htmlFor="email">Correo:</label>
                         <input 
                             type="email" 
                             id="email" 
@@ -64,7 +65,7 @@ export default function Signup() {
                         />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="phone">Teléfono:</label>
+                        <label htmlFor="phone">Celular:</label>
                         <input 
                             type="tel" 
                             id="phone" 
@@ -76,6 +77,9 @@ export default function Signup() {
                     </div>
                     <div className="botones">
                         <button className="button" type="submit">Registrarse</button>
+                        <div className='registro'>
+                          <p>¿Ya tienes una cuenta?</p><Link to="/">Inicia Sesión</Link>
+                        </div>
                     </div>
                 </form>
             </div>

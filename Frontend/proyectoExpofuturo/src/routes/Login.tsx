@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import DefaultLayout from "../layout/DefaultLayout";
+import { Link } from 'react-router-dom';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -15,12 +16,13 @@ export default function Login() {
         <DefaultLayout>
             <div className="login-container">
                 <form className="login-form" action="#" method="post" onSubmit={handleSubmit}>
-                    <h2>Iniciar sesión</h2>
-                    <div className="container-img">
+                
+                <div className="container-img">
                         <img src="../imagenes/logo.jpg" alt="logo" />
                     </div>
+                    
                     <div className="input-group">
-                        <label htmlFor="email">E-mail:</label>
+                        <label htmlFor="email">Correo:</label>
                         <input 
                             type="email" 
                             id="email" 
@@ -42,8 +44,12 @@ export default function Login() {
                         />
                     </div>
                     <div className="botones">
-                        <button className="button" type="submit">Ingresar</button>
-                        <button className="button" type="submit">Registrarse</button>
+                        <button className="button" type="submit">Iniciar Sesión</button>
+                        <div className='registro'>
+                           <p>¿No tienes cuenta?</p><Link to="/signup">Registrate</Link>
+                        </div>
+                        
+                        
                     </div>
                 </form>
             </div>
