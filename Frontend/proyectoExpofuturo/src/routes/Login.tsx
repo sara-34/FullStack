@@ -1,10 +1,18 @@
 import { useState } from 'react';
+import './index.css';
 import DefaultLayout from "../layout/DefaultLayout";
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { useAuth } from '../auth/AuthProvaider';
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const auth = useAuth();
+
+    if(auth.isAuthenticated){
+        return <Navigate to="/dasbohard"/>
+    }
+
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -14,6 +22,7 @@ export default function Login() {
 
     return (
         <DefaultLayout>
+        <div className='bodyf'>
             <div className="login-container">
                 <form className="login-form" action="#" method="post" onSubmit={handleSubmit}>
                 
@@ -53,6 +62,9 @@ export default function Login() {
                     </div>
                 </form>
             </div>
+
+        </div>
+            
         </DefaultLayout>
     );
 }

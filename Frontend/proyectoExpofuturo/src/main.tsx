@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import '../src/routes/index.css';
+import '../src/routes/dasbohard.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './routes/Login';
 import SIgnup from './routes/signup';
