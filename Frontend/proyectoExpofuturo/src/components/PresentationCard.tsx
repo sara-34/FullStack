@@ -3,18 +3,20 @@ import { Presentation } from '../types';
 
 interface PresentationCardProps {
   presentation: Presentation;
-  onDelete: (id: number) => void; // Añadir la prop onDelete
+  onDelete: (id: number) => void;
+  onEdit: () => void; // Añadir la prop onEdit
 }
 
-const PresentationCard: React.FC<PresentationCardProps> = ({ presentation, onDelete }) => {
+const PresentationCard: React.FC<PresentationCardProps> = ({ presentation, onDelete, onEdit }) => {
   return (
     <div className="card">
       <h3>{presentation.title}</h3>
-      <p>Description: {presentation.description}</p>
-      <p>Date: {presentation.date}</p>
-      <p>Time: {presentation.time}</p>
-      <p>Participants: {presentation.participants}</p>
-      <button onClick={() => onDelete(presentation.id)} className="button">Eliminar</button> {/* Botón de eliminar */}
+      <p>Descripción: {presentation.description}</p>
+      <p>Fecha: {presentation.date}</p>
+      <p>Hora: {presentation.time}</p>
+      <p>Participantes: {presentation.participants}</p>
+      <button onClick={() => onEdit()}>Editar</button>
+      <button onClick={() => onDelete(presentation.id)}>Eliminar</button>
     </div>
   );
 };
