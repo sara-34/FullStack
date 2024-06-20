@@ -133,7 +133,7 @@ const Dasbohard: React.FC = () => {
         <h1>Bienvenido a nuestra página de ponencias</h1>
         <div className="dashboard-container">
           {!showForm && (
-            <button onClick={() => setShowForm(true)} className="button">
+            <button onClick={() => setShowForm(true)} className="buttond">
               {editPresentation ? "Editar Ponencia" : "Crear Ponencia"}
             </button>
           )}
@@ -147,7 +147,7 @@ const Dasbohard: React.FC = () => {
           )}
 
           {!showSpeakerForm && (
-            <button onClick={() => setShowSpeakerForm(true)} className="button">Agregar Ponente</button>
+            <button onClick={() => setShowSpeakerForm(true)} className="buttond">Agregar Ponente</button>
           )}
           {showSpeakerForm && (
             <AddSpeaker
@@ -159,7 +159,7 @@ const Dasbohard: React.FC = () => {
           )}
 
           {!showSpaceForm && (
-            <button onClick={() => setShowSpaceForm(true)} className="button">Agregar Espacio</button>
+            <button onClick={() => setShowSpaceForm(true)} className="buttond">Agregar Espacio</button>
           )}
           {showSpaceForm && (
             <AddSpace
@@ -198,9 +198,9 @@ const Dasbohard: React.FC = () => {
       </div>
 
       <div className='ponentes'>
-        <div className="">
+        <div className="cuadro-ponencias">
           <h4>Ponentes</h4>
-          <div className="">
+          <div className="cardsponencias">
             {speakers.length > 0 ? (
               speakers.map((speaker, index) => (
                 <SpeakerCard
@@ -211,7 +211,7 @@ const Dasbohard: React.FC = () => {
                 />
               ))
             ) : (
-              <div className="">
+              <div className="ponencias-vacias">
                 <p>No hay ponentes agregados.</p>
               </div>
             )}
@@ -219,10 +219,10 @@ const Dasbohard: React.FC = () => {
         </div>
       </div>
 
-      <div className='espacios'>
-        <div className="">
+<div className='espacios'>
+        <div className="cuadro-ponencias">
           <h4>Espacios</h4>
-          <div className="">
+          <div className="cardespacio">
             {spaces.length > 0 ? (
               spaces.map((space, index) => (
                 <SpaceCard
@@ -233,14 +233,16 @@ const Dasbohard: React.FC = () => {
                 />
               ))
             ) : (
-              <div className="">
+              <div className="ponencias-vacias">
                 <p>No hay espacios agregados.</p>
               </div>
             )}
           </div>
         </div>
       </div>
-    </div>
+</div>
+      
+   
   );
 };
 

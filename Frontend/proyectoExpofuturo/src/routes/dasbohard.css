@@ -1,6 +1,6 @@
 /* dasbohard.css */
 body {
-  font-family: "Roboto Slab", serif;
+  
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -337,10 +337,20 @@ li{
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  background-color: #666;
+  color: #819444;
+  background-color: white;
+  box-shadow: 10px 5px 5px black;
 }
 
-/* Contenedor del cuadro de ponencias */
+.ponencia{
+  width: 100%;
+  height: 550px;
+  
+  background-color: #8194449e;
+  color: white;
+}
+
+
 .cuadro-ponencias {
   width: 100%;
   max-width: 1200px;
@@ -348,27 +358,32 @@ li{
   
 }
 
-/* Título de ponencias */
+
 .cuadro-ponencias h4 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
-  color: white;
+  color:white;
 }
 
-/* Contenedor de las tarjetas de ponencias */
+
+
+
 .cards-ponencias {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
   gap: 20px;
   justify-content: center;
 }
 
-/* Estilos de las tarjetas individuales */
-.card {
-  width: 200px;
-  height: 200px;
-  background-color: white;
+
+.card
+
+{
+  width: 250px;
+  height: 250px;
+  background-color: #025159;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -380,18 +395,39 @@ li{
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para el contenido de la tarjeta */
+.botonesg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.card button {
+  background-color: #819444;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 1px solid white;
+  margin-top: 30px;
+  margin-left: 30px;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
 .card h3 {
   font-size: 18px;
+  color: white;
   margin: 10px;
 }
 
 .card p {
   font-size: 14px;
   margin: 10px;
+  color: white;
 }
 
-/* Estilos para cuando no hay ponencias */
+
 .ponencias-vacias {
   display: flex;
   justify-content: center;
@@ -401,25 +437,107 @@ li{
 
 .ponencias-vacias p {
   font-size: 18px;
-  color: white;
+  color: #065563;
 }
+/*Finalizando ponencias*/
 
-.ponentes{
-  width: 100%;
-  height: 350px;
-  margin-top: -25px;
-  background-color: #01272d;
-  color: #fff;
-}
 
 .espacios{
   width: 100%;
   height: 200px;
   margin-top: -25px;
-  background-color: #666666;
-  color: #fff;
+  background-color: white;
+  color: #065563;
+}
+
+
+
+/*Espacio Ponente*/
+
+.cards-ponente{
+  width: 300px;
+  height: 380px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #145d6a;
+  box-shadow: 8px 5px 5px #065563;
+
+}
+
+.ponentes{
+  width: 100%;
+  height: 100%;
+  margin-top: -25px;
+  background-color: white;
+  color: #065563;
+}
+
+.ponentes h4{
+  color: #025159;
+}
+
+.imagenponente img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+
+.cardsponencias {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 20px;
+  height: 500px;
+  justify-content: center;
 }
 
 h3{
-  color: #333333;
+  color: #025159;
 }
+
+/*espacio*/
+
+.cards-space{
+  width: 250px;
+  height: 430px;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  
+
+}
+
+.cards-space h3{
+  color: #000000;
+}
+.espacioimg img{
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: 10px;
+
+}
+
+.espacios{
+  width: 100%;
+  height: 550px;
+  margin-top: -25px;
+  background-color: #025159;
+  color: white;
+}
+
+.cardespacio{
+  
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+    justify-content: center;
+  
+}
+
+/*FONDO*/

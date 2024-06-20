@@ -9,12 +9,15 @@ interface SpaceCardProps {
 
 const SpaceCard: React.FC<SpaceCardProps> = ({ space, onDelete, onEdit }) => {
   return (
-    <div className="card">
+    <div className="cards-space">
+      <div className='espacioimg'>
+        <img src="../imagenes/lugares.jpg" alt="avatar" />
+      </div>
       <h3>{space.name}</h3>
-      <p>Type: {space.type}</p>
-      <p>Capacity: {space.minCapacity} - {space.maxCapacity}</p>
-      <p>Square Meters: {space.squareMeters}</p>
-      <p>Features: {space.features}</p>
+      <p>Tipo de salon: {space.type}</p>
+      <p>Capacidad: {space.minCapacity} - {space.maxCapacity}</p>
+      <p>Metros Cuadrados: {space.squareMeters}</p>
+      <p>Caracteristicas: {space.features}</p>
       <button onClick={onEdit}>Editar</button>
       <button onClick={onDelete}>Eliminar</button>
     </div>

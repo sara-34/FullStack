@@ -9,12 +9,16 @@ interface SpeakerCardProps {
 
 const SpeakerCard: React.FC<SpeakerCardProps> = ({ speaker, onDelete, onEdit }) => {
   return (
-    <div className="card">
+    <div className="cards-ponente">
+      <div className='imagenponente'>
+        <img src="../imagenes/fodo.jpg" alt="avatar" />
+      </div>
+      
       <h3>{speaker.name} {speaker.surname}</h3>
-      <p>Email: {speaker.email}</p>
-      <p>Phone: {speaker.phone}</p>
-      <p>City: {speaker.city}</p>
-      <p>Company: {speaker.company}</p>
+      <p>{speaker.email}</p>
+      <p>{speaker.phone}</p>
+      <p>{speaker.city}</p>
+      <p>{speaker.company}</p>
       <button onClick={onEdit}>Editar</button>
       <button onClick={onDelete}>Eliminar</button>
     </div>
